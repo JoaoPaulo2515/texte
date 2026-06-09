@@ -1,0 +1,48 @@
+/sige_Plataforma/
+├── aluno/
+│   ├── index.php                    # Dashboard do Aluno
+│   ├── login.php                    # Login específico para alunos
+│   ├── logout.php                   # Logout
+│   ├── perfil.php                   # Perfil do aluno
+│   ├── alterar_senha.php            # Alterar senha
+│   │
+│   ├── acadêmico/
+│   │   ├── minhas_notas.php         # Visualização de notas
+│   │   ├── boletim.php              # Boletim escolar
+│   │   ├── historico.php            # Histórico escolar
+│   │   ├── frequencia.php           # Frequência/Faltas
+│   │   ├── horario.php              # Horário de aulas
+│   │   ├── calendario.php           # Calendário académico
+│   │   └── avaliacoes.php           # Próximas avaliações/provas
+│   │
+│   ├── financeiro/
+│   │   ├── mensalidades.php         # Mensalidades e débitos
+│   │   ├── pagamentos.php           # Histórico de pagamentos
+│   │   ├── extrato.php              # Extrato financeiro
+│   │   ├── recibos.php              # Recibos de pagamento
+│   │   └── fatura.php               # Fatura atual
+│   │
+│   ├── documentos/
+│   │   ├── certificados.php         # Certificados emitidos
+│   │   ├── declaracoes.php          # Declarações escolares
+│   │   ├── comprovativos.php        # Comprovativos de pagamento
+│   │   └── material.php             # Material didático disponível
+│   │
+│   ├── comunicacao/
+│   │   ├── avisos.php               # Avisos da escola
+│   │   ├── mensagens.php            # Mensagens do sistema
+│   │   ├── notificacoes.php         # Notificações
+│   │   └── contato.php              # Contactar a escola
+│   │
+│   ├── biblioteca/
+│   │   ├── acervo.php               # Acervo da biblioteca
+│   │   ├── emprestimos.php          # Meus empréstimos
+│   │   └── reservas.php             # Minhas reservas
+│   │
+│   └── includes/
+│       ├── menu_aluno.php           # Menu lateral do aluno
+│       ├── header_aluno.php         # Cabeçalho da área aluno
+│       └── footer_aluno.php         # Rodapé
+
+Aqui está o arquivo aluno/includes/menu_aluno.php atualizado com as cores do menu da tesouraria (gradiente invertido: #1A2A6C 0%, #006B3E 100%) e com o chat adicionado no cabeçalho:
+ quero que tenha botao para ler em pdf, abril em outra janela

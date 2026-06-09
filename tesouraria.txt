@@ -1,0 +1,20 @@
+escola/tesouraria/
+├── index.php                    # Dashboard da Tesouraria
+├── pagamentos.php               # Gestão de Pagamentos
+├── mensalidades.php             # Gestão de Mensalidades
+├── ver_pagamentos.php           # Consulta de Pagamentos
+├── relatorios_financeiros.php   # Relatórios Financeiros
+├── relatorios_diarios.php       # Relatórios Diários
+├── dividas.php                  # Gestão de Dívidas
+├── caixa.php                    # Caixa Diário
+├── receitas.php                 # Gestão de Receitas
+├── despesas.php                 # Gestão de Despesas
+├── fluxo_caixa.php              # Fluxo de Caixa
+├── balancete.php                # Balancete Financeiro
+├── extrato.php                  # Extrato de Contas
+├── recibos.php                  # Emissão de Recibos
+└── config.php                   # Configurações Financeiras
+
+includes/
+├── funcoes_tesouraria.php       # Funções auxiliares
+└── relatorios_pdf.php           # Geração de PDFs

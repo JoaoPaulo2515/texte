@@ -1,0 +1,120 @@
+PEDAGÓGICO
+│
+├── 📌 GESTÃO ACADÊMICA
+│   ├── Turmas
+│   │   ├── Criar/Editar/Excluir Turmas
+│   │   ├── Atribuir Alunos às Turmas
+│   │   ├── Gerenciar Horários
+│   │   └── Mapa de Sala
+│   │
+│   ├── Disciplinas
+│   │   ├── Cadastrar Disciplinas
+│   │   ├── Atribuir Professores
+│   │   └── Definir Carga Horária
+│   │
+│   ├── Matrículas
+│   │   ├── Nova Matrícula
+│   │   ├── Renovação de Matrícula
+│   │   ├── Transferências
+│   │   ├── Reintegrações
+│   │   └── Histórico Escolar
+│   │
+│   └── Calendário Escolar
+│       ├── Períodos Letivos
+│       ├── Bimestres/Trimestres
+│       ├── Feriados
+│       └── Eventos Escolares
+│
+├── 🎯 AVALIAÇÃO
+│   ├── Notas
+│   │   ├── Lançamento de Notas
+│   │   ├── Cálculo de Médias
+│   │   ├── Recuperações
+│   │   └── Exames Finais
+│   │
+│   ├── Provas Online
+│   │   ├── Criar Provas
+│   │   ├── Banco de Questões
+│   │   ├── Aplicar Provas
+│   │   ├── Correção Automática
+│   │   └── Resultados
+│   │
+│   ├── Frequência
+│   │   ├── Marcação de Presenças
+│   │   ├── Relatório de Faltas
+│   │   └── Justificativas
+│   │
+│   └── Boletins
+│       ├── Gerar Boletim Individual
+│       ├── Boletim por Turma
+│       ├── Boletim por Período
+│       └── Histórico do Aluno
+│
+├── 📊 RELATÓRIOS PEDAGÓGICOS
+│   ├── Desempenho Acadêmico
+│   │   ├── Médias por Turma
+│   │   ├── Médias por Disciplina
+│   │   ├── Análise de Aprovação
+│   │   └── Rendimento Escolar
+│   │
+│   ├── Estatísticas
+│   │   ├── Taxa de Aprovação
+│   │   ├── Índice de Repetência
+│   │   ├── Evasão Escolar
+│   │   └── Desempenho por Género
+│   │
+│   └── Indicadores
+│       ├── Melhores Alunos
+│       ├── Piores Notas
+│       ├── Alunos em Recuperação
+│       └── Alunos com Baixa Frequência
+│
+├── 👨‍🏫 CORPO DOCENTE
+│   ├── Professores
+│   │   ├── Cadastro de Professores
+│   │   ├── Atribuição de Turmas
+│   │   ├── Atribuição de Disciplinas
+│   │   ├── Horário do Professor
+│   │   └── Avaliação de Professores
+│   │
+│   ├── Coordenação
+│   │   ├── Atividades Pedagógicas
+│   │   ├── Planejamento de Aulas
+│   │   └── Acompanhamento Pedagógico
+│   │
+│   └── Capacitação
+│       ├── Formações
+│       ├── Workshops
+│       └── Certificações
+│
+├── 📋 PLANEJAMENTO
+│   ├── Planos de Ensino
+│   │   ├── Conteúdo Programático
+│   │   ├── Cronograma de Aulas
+│   │   ├── Metodologias
+│   │   └── Recursos Didáticos
+│   │
+│   ├── Planos de Aula
+│   │   ├── Registro Diário
+│   │   ├── Objetivos de Aula
+│   │   └── Avaliações Previstas
+│   │
+│   └── Projetos
+│       ├── Projetos Interdisciplinares
+│       ├── Feiras de Ciências
+│       ├── Gincanas
+│       └── Eventos Culturais
+│
+├── 📖 BIBLIOTECA/RECURSOS
+│   ├── Acervo
+│   ├── Empréstimos
+│   ├── Material Didático
+│   └── Recursos Digitais
+│
+└── ⚙️ CONFIGURAÇÕES
+    ├── Anos Letivos
+    ├── Ciclos de Ensino
+    ├── Cursos/Classes
+    ├── Turnos
+    ├── Sala de Aula
+    └── Parâmetros de Avaliação

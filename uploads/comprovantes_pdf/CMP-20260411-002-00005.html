@@ -1,0 +1,64 @@
+
+            <!DOCTYPE html>
+            <html lang="pt-AO">
+            <head>
+                <meta charset="UTF-8">
+                <title>Comprovante de Pagamento - Colégio Pombal-Nº 4324</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 20px; }
+                    .comprovante-container { max-width: 800px; margin: 0 auto; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); overflow: hidden; }
+                    .header { background: linear-gradient(135deg, #006B3E 0%, #1A2A6C 100%); color: white; padding: 30px; text-align: center; }
+                    .header .logo { font-size: 3em; margin-bottom: 10px; }
+                    .content { padding: 30px; }
+                    .info-box { background: #f8f9fa; border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #006B3E; }
+                    .info-row { display: flex; padding: 8px 0; border-bottom: 1px solid #eee; }
+                    .info-label { width: 180px; font-weight: bold; color: #555; }
+                    .info-value { flex: 1; color: #333; }
+                    .total-box { background: #e8f5e9; border-radius: 10px; padding: 15px; text-align: center; margin: 20px 0; }
+                    .total-value { font-size: 2em; font-weight: bold; color: #006B3E; }
+                    .footer { background: #f8f9fa; padding: 20px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+                    .status-pago { display: inline-block; padding: 5px 15px; background: #28a745; color: white; border-radius: 20px; font-weight: bold; }
+                    @media print { body { background: white; padding: 0; } .comprovante-container { box-shadow: none; } }
+                </style>
+            </head>
+            <body>
+                <div class="comprovante-container">
+                    <div class="header">
+                        <div class="logo"><i class="fas fa-chalkboard-user"></i></div>
+                        <h2>SIGE Angola</h2>
+                        <p>Sistema Integrado de Gestão Escolar</p>
+                    </div>
+                    <div class="content">
+                        <div style="text-align: center; margin-bottom: 20px;"><span class="status-pago">PAGAMENTO CONFIRMADO</span></div>
+                        <div class="info-box">
+                            <div class="info-row"><div class="info-label">Nº Comprovante:</div><div class="info-value"><strong>CMP-20260411-002-00005</strong></div></div>
+                            <div class="info-row"><div class="info-label">Data de Emissão:</div><div class="info-value">11/04/2026</div></div>
+                        </div>
+                        <h3>Dados da Escola</h3>
+                        <div class="info-box">
+                            <div class="info-row"><div class="info-label">Escola:</div><div class="info-value">Colégio Pombal-Nº 4324</div></div>
+                            <div class="info-row"><div class="info-label">Subdomínio:</div><div class="info-value">colegio-pombal4324.sige.ao</div></div>
+                            <div class="info-row"><div class="info-label">NUIT:</div><div class="info-value">Não informado</div></div>
+                        </div>
+                        <h3>Detalhes do Pagamento</h3>
+                        <div class="info-box">
+                            <div class="info-row"><div class="info-label">Plano:</div><div class="info-value">Básico</div></div>
+                            <div class="info-row"><div class="info-label">Referente:</div><div class="info-value">Abril/2026</div></div>
+                            <div class="info-row"><div class="info-label">Método:</div><div class="info-value">Dinheiro</div></div>
+                            <div class="info-row"><div class="info-label">Data:</div><div class="info-value">11/04/2026</div></div>
+                        </div>
+                        <div class="total-box"><div>VALOR PAGO</div><div class="total-value">KZ 1.990.000,00</div></div>
+                        <div class="info-box"><div class="info-row"><div class="info-label">Próxima data de vencimento:</div><div class="info-value">10/06/2027</div></div></div>
+                    </div>
+                    <div class="footer">
+                        <p>SIGE Angola - Sistema Integrado de Gestão Escolar | www.sige.ao</p>
+                        <p>Documento emitido em 11/04/2026 17:50:45</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px;" class="btn-print no-print">
+                    <button onclick="window.print()" style="padding: 10px 20px; background: #006B3E; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        <i class="fas fa-print"></i> Imprimir Comprovante
+                    </button>
+                </div>
+            </body>
+            </html>

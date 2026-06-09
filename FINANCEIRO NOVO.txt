@@ -1,0 +1,125 @@
+FINANCEIRO
+│
+├── 📌 GESTÃO DE MENSALIDADES
+│   ├── Configuração de Mensalidades
+│   │   ├── Definir Valores por Turma
+│   │   ├── Definir Valores por Classe/Ano
+│   │   ├── Bolsas e Descontos
+│   │   ├── Isenções Parciais/Totais
+│   │   └── Ajustes de Valores
+│   │
+│   ├── Lançamento de Mensalidades
+│   │   ├── Gerar Mensalidades em Lote
+│   │   ├── Lançar Mensalidade Individual
+│   │   ├── Ajustar Data de Vencimento
+│   │   ├── Reajustes e Correções
+│   │   └── Cancelamento de Mensalidades
+│   │
+│   ├── Controle de Pagamentos
+│   │   ├── Registrar Pagamento
+│   │   ├── Pagamento Parcial
+│   │   ├── Pagamento Antecipado
+│   │   ├── Pagamento em Atraso
+│   │   ├── Multas e Juros
+│   │   └── Negociação de Dívidas
+│   │
+│   ├── Gestão de Inadimplência
+│   │   ├── Lista de Inadimplentes
+│   │   ├── Cobranças
+│   │   ├── Notificações
+│   │   ├── Acordos de Pagamento
+│   │   ├── Renegociação de Dívidas
+│   │   └── Bloqueio de Matrícula
+│   │
+│   └── Extratos e Recibos
+│       ├── Extrato do Aluno
+│       ├── Recibo de Pagamento
+│       ├── Comprovante de Quitação
+│       └── Declaração de Adimplência
+│
+├── 💳 CAIXA E BANCOS
+│   ├── Fluxo de Caixa
+│   │   ├── Abertura/Fechamento de Caixa
+│   │   ├── Entradas e Saídas
+│   │   ├── Sangria e Suprimento
+│   │   └── Conciliação Bancária
+│   │
+│   ├── Contas Bancárias
+│   │   ├── Cadastro de Bancos
+│   │   ├── Saldo por Conta
+│   │   ├── Transferências entre Contas
+│   │   └── Extratos Bancários
+│   │
+│   └── Movimentações Financeiras
+│       ├── Receitas
+│       ├── Despesas
+│       ├── Transferências
+│       └── Estornos
+│
+├── 🧾 CONTAS A PAGAR E RECEBER
+│   ├── Contas a Receber (CPR)
+│   │   ├── Mensalidades
+│   │   ├── Taxas Escolares
+│   │   ├── Material Escolar
+│   │   ├── Uniformes
+│   │   ├── Atividades Extracurriculares
+│   │   └── Outros Serviços
+│   │
+│   ├── Contas a Pagar (CTP)
+│   │   ├── Fornecedores
+│   │   ├── Salários e Encargos
+│   │   ├── Água, Luz, Internet
+│   │   ├── Aluguel
+│   │   ├── Manutenção
+│   │   └── Materiais de Consumo
+│   │
+│   └── Controle de Prazos
+│       ├── Vencimentos
+│       ├── Antecipações
+│       ├── Parcelamentos
+│       └── Renegociações
+│
+├── 📊 RELATÓRIOS FINANCEIROS
+│   ├── Relatórios Gerenciais
+│   │   ├── Fluxo de Caixa (Diário/Semanal/Mensal)
+│   │   ├── Demonstrativo de Resultados (DRE)
+│   │   ├── Balanço Patrimonial
+│   │   ├── Projeção de Receitas
+│   │   └── Análise de Inadimplência
+│   │
+│   ├── Relatórios de Mensalidades
+│   │   ├── Lista de Pagamentos por Período
+│   │   ├── Arrecadação por Turma
+│   │   ├── Arrecadação por Classe
+│   │   ├── Receita por Mês
+│   │   ├── Comparativo Mensal/Anual
+│   │   └── Previsão de Receita
+│   │
+│   ├── Relatórios de Inadimplência
+│   │   ├── Alunos Inadimplentes
+│   │   ├── Valor Total em Atraso
+│   │   ├── Antiguidade da Dívida
+│   │   ├── Perfil de Inadimplência
+│   │   └── Recuperação de Crédito
+│   │
+│   └── Relatórios Fiscais
+│       ├── Livro Caixa
+│       ├── Livro Diário
+│       ├── Extratos Bancários
+│       └── Declarações Fiscais
+│
+├── 📁 DOCUMENTAÇÃO FINANCEIRA
+│   ├── Contratos de Prestação de Serviços
+│   ├── Notas Fiscais
+│   ├── Recibos de Pagamento
+│   ├── Comprovantes Bancários
+│   └── Declaração de Quitação de Débitos
+│
+└── ⚙️ CONFIGURAÇÕES FINANCEIRAS
+    ├── Plano de Contas
+    ├── Formas de Pagamento
+    ├── Bancos e Contas
+    ├── Tabela de Preços
+    ├── Índices de Correção
+    ├── Multas e Juros
+    └── Parâmetros Contábeis

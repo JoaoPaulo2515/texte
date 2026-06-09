@@ -1,0 +1,287 @@
+RECURSOS HUMANOS (RH)
+│
+├── 📌 GESTÃO DE PESSOAS
+│   ├── Funcionários
+│   │   ├── Cadastro de Funcionários
+│   │   ├── Documentação Pessoal
+│   │   ├── Contrato de Trabalho
+│   │   ├── Histórico Profissional
+│   │   ├── Formação Acadêmica
+│   │   ├── Certificações
+│   │   ├── Avaliação de Desempenho
+│   │   └── Promoções e Reajustes
+│   │
+│   ├── Cargos e Funções
+│   │   ├── Cadastro de Cargos
+│   │   ├── Descrição de Funções
+│   │   ├── Salário Base
+│   │   ├── Benefícios por Cargo
+│   │   └── Plano de Carreira
+│   │
+│   ├── Departamentos
+│   │   ├── Cadastro de Departamentos
+│   │   ├── Hierarquia Organizacional
+│   │   ├── Alocação de Funcionários
+│   │   └── Organograma
+│   │
+│   └── Colaboradores por Tipo
+│       ├── Professores
+│       ├── Administrativos
+│       ├── Técnicos
+│       ├── Apoio
+│       ├── Estagiários
+│       └── Terceirizados
+│
+├── 💼 FOLHA DE PAGAMENTO
+│   ├── Processamento Mensal
+│   │   ├── Cálculo de Salários
+│   │   ├── Horas Extras
+│   │   ├── Adicionais (Noturno, Insalubridade)
+│   │   ├── Comissões
+│   │   ├── Gratificações
+│   │   ├── Prêmios
+│   │   └── 13º Salário
+│   │
+│   ├── Descontos
+│   │   ├── INSS
+│   │   ├── IRRF
+│   │   ├── Faltas e Atrasos
+│   │   ├── Adiantamentos
+│   │   ├── Empréstimos Consignados
+│   │   ├── Plano de Saúde
+│   │   ├── Vale Transporte
+│   │   ├── Vale Alimentação/Refeição
+│   │   └── Contribuição Sindical
+│   │
+│   ├── Benefícios
+│   │   ├── Vale Transporte
+│   │   ├── Vale Alimentação
+│   │   ├── Plano de Saúde
+│   │   ├── Plano Odontológico
+│   │   ├── Seguro de Vida
+│   │   ├── Auxílio Creche
+│   │   ├── Auxílio Educação
+│   │   └── Participação nos Lucros (PLR)
+│   │
+│   ├── Provisões Trabalhistas
+│   │   ├── Férias
+│   │   ├── 13º Salário
+│   │   ├── FGTS
+│   │   └── Multa Rescisória
+│   │
+│   └── Relatórios da Folha
+│       ├── Holerite Individual
+│       ├── Resumo da Folha
+│       ├── Folha por Departamento
+│       ├── Encargos Sociais
+│       ├── Recolhimentos (INSS, FGTS, IRRF)
+│       └── Guias de Pagamento
+│
+├── ⏰ PONTO E FREQUÊNCIA
+│   ├── Registro de Ponto
+│   │   ├── Ponto Eletrônico
+│   │   ├── Ponto Manual
+│   │   ├── Horário de Entrada/Saída
+│   │   ├── Intervalo de Almoço
+│   │   └── Horários Flexíveis
+│   │
+│   ├── Controle de Frequência
+│   │   ├── Presenças
+│   │   ├── Faltas
+│   │   ├── Atrasos
+│   │   ├── Saídas Antecipadas
+│   │   ├── Justificativas
+│   │   └── Atestados Médicos
+│   │
+│   ├── Abonos e Licenças
+│   │   ├── Licença Maternidade/Paternidade
+│   │   ├── Licença Médica
+│   │   ├── Férias
+│   │   ├── Folgas Compensatórias
+│   │   ├── Falta Abonada
+│   │   └── Doação de Sangue
+│   │
+│   └── Escalas de Trabalho
+│       ├── Turnos
+│       ├── Escala Semanal
+│       ├── Plantões
+│       ├── Substituições
+│       └── Horário de Aulas (Professores)
+│
+├── 📋 RECRUTAMENTO E SELEÇÃO
+│   ├── Planejamento de Contratação
+│   │   ├── Solicitação de Vagas
+│   │   ├── Aprovação de Vagas
+│   │   └── Orçamento
+│   │
+│   ├── Processo Seletivo
+│   │   ├── Cadastro de Vagas
+│   │   ├── Divulgação
+│   │   ├── Triagem de Currículos
+│   │   ├── Entrevistas
+│   │   ├── Testes e Avaliações
+│   │   ├── Análise de Perfil
+│   │   └── Feedback aos Candidatos
+│   │
+│   └── Admissão
+│       ├── Exame Admissional
+│       ├── Registro em Carteira (CTPS)
+│       ├── Documentação Admissional
+│       ├── Integração e Treinamento
+│       └── Período de Experiência
+│
+├── 🎓 TREINAMENTO E DESENVOLVIMENTO (T&D)
+│   ├── Levantamento de Necessidades
+│   │   ├── Avaliação de Desempenho
+│   │   ├── Pesquisa de Clima
+│   │   └── Feedback 360°
+│   │
+│   ├── Planos de Treinamento
+│   │   ├── Treinamento Técnico
+│   │   ├── Treinamento Comportamental
+│   │   ├── Reciclagem
+│   │   ├── Atualização Pedagógica
+│   │   └── Capacitação em TI
+│   │
+│   ├── Execução de Treinamentos
+│   │   ├── Palestras
+│   │   ├── Workshops
+│   │   ├── Cursos
+│   │   ├── Seminários
+│   │   └── EAD
+│   │
+│   └── Avaliação e Certificação
+│       ├── Certificados
+│       ├── Registro de Horas
+│       └── Impacto dos Treinamentos
+│
+├── 📊 AVALIAÇÃO DE DESEMPENHO
+│   ├── Ciclos de Avaliação
+│   │   ├── Avaliação Trimestral
+│   │   ├── Avaliação Semestral
+│   │   └── Avaliação Anual
+│   │
+│   ├── Critérios de Avaliação
+│   │   ├── Competências Técnicas
+│   │   ├── Competências Comportamentais
+│   │   ├── Produtividade
+│   │   ├── Assiduidade
+│   │   ├── Pontualidade
+│   │   └── Trabalho em Equipe
+│   │
+│   ├── Autoavaliação
+│   ├── Avaliação do Gestor
+│   ├── Avaliação por Pares
+│   └── Resultados e Feedback
+│
+├── 📁 DOCUMENTAÇÃO DE RH
+│   ├── Documentos Pessoais
+│   │   ├── Cédula Pessoal/BI
+│   │   ├── NIF
+│   │   ├── Cartão de Eleitor
+│   │   ├── Certidão de Nascimento
+│   │   ├── CTPS (Carteira de Trabalho)
+│   │   └── PIS/PASEP
+│   │
+│   ├── Documentos de Formação
+│   │   ├── Diplomas
+│   │   ├── Certificados
+│   │   ├── Histórico Escolar
+│   │   └── Registro Profissional
+│   │
+│   ├── Contratos de Trabalho
+│   │   ├── Contrato por Prazo Indeterminado
+│   │   ├── Contrato por Prazo Determinado
+│   │   ├── Contrato de Experiência
+│   │   └── Aditivos Contratuais
+│   │
+│   └── Prontuário do Funcionário
+│       ├── Ficha Cadastral
+│       ├── Histórico Profissional
+│       ├── Registro de Férias
+│       ├── Registro de Ocorrências
+│       └── Anotações Gerais
+│
+├── 🏥 SAÚDE E SEGURANÇA DO TRABALHO (SST)
+│   ├── Exames Periódicos
+│   │   ├── Admissional
+│   │   ├── Periódico
+│   │   ├── Retorno ao Trabalho
+│   │   ├── Mudança de Função
+│   │   └── Demissional
+│   │
+│   ├── PCMSO (Programa de Controle Médico)
+│   ├── PPRA (Programa de Prevenção de Riscos)
+│   ├── Treinamentos de Segurança
+│   ├── Equipamentos de Proteção Individual (EPI)
+│   ├── Acidentes de Trabalho
+│   │   ├── Registro de Acidentes
+│   │   ├── CAT (Comunicação de Acidente)
+│   │   └── Análise de Acidentes
+│   │
+│   └── CIPA (Comissão Interna de Prevenção)
+│       ├── Eleição da CIPA
+│       ├── Membros
+│       ├── Reuniões
+│       └── Ações Preventivas
+│
+├── 🚪 RESCISÃO E DESLIGAMENTO
+│   ├── Tipos de Desligamento
+│   │   ├── Pedido de Demissão
+│   │   ├── Dispensa sem Justa Causa
+│   │   ├── Dispensa com Justa Causa
+│   │   ├── Término de Contrato
+│   │   ├── Aposentadoria
+│   │   └── Falecimento
+│   │
+│   ├── Cálculo Rescisório
+│   │   ├── Saldo de Salário
+│   │   ├── Aviso Prévio (Trabalhado/Indenizado)
+│   │   ├── Férias Vencidas e Proporcionais
+│   │   ├── 13º Salário Proporcional
+│   │   ├── FGTS + Multa de 40%
+│   │   └── Outras Verbas Rescisórias
+│   │
+│   ├── Homologação
+│   │   ├── Documentação
+│   │   ├── Termo de Rescisão (TRCT)
+│   │   └── Acompanhamento Sindical
+│   │
+│   └── Entrevista de Desligamento
+│       ├── Motivos da Saída
+│       ├── Feedback
+│       └── Pesquisa de Clima
+│
+├── 📊 RELATÓRIOS DE RH
+│   ├── Relatórios Administrativos
+│   │   ├── Lista de Funcionários
+│   │   ├── Aniversariantes do Mês
+│   │   ├── Tempo de Casa
+│   │   ├── Rotatividade (Turnover)
+│   │   ├── Absenteísmo
+│   │   └── Idade Média dos Funcionários
+│   │
+│   ├── Relatórios da Folha
+│   │   ├── Resumo da Folha de Pagamento
+│   │   ├── Evolução Salarial
+│   │   ├── Encargos Sociais
+│   │   └── Projeção Anual
+│   │
+│   ├── Relatórios de Férias
+│   │   ├── Programação de Férias
+│   │   ├── Férias Vencidas
+│   │   └── Férias a Vencer
+│   │
+│   └── Relatórios de Treinamento
+│       ├── Horas de Treinamento
+│       ├── Funcionários Treinados
+│       └── Investimento em T&D
+│
+└── ⚙️ CONFIGURAÇÕES DE RH
+    ├── Cargos e Salários
+    ├── Tabelas de INSS e IRRF
+    ├── Convenções Coletivas
+    ├── Calendário de Pagamento
+    ├── Período de Férias
+    ├── Feriados e Pontos Facultativos
+    └── Políticas de RH

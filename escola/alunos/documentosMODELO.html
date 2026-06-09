@@ -1,0 +1,513 @@
+<div class="tab-pane fade" id="documentos">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-id-card fa-3x text-primary mb-2"></i>
+                                            <h6>BI / Documento de Identificação</h6>
+                                            <input type="file" name="bi_documento" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf" onchange="previewDocumento(this, 'bi_preview')">
+                                            <div id="bi_preview" class="mt-2"></div>
+                                            <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="capturarDocumento('bi_documento', 'bi_preview')">
+                                                <i class="fas fa-camera"></i> Capturar
+                                            </button>
+                                            <small class="text-muted d-block">PDF, JPG, PNG (Max: 2MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-certificate fa-3x text-success mb-2"></i>
+                                            <h6>Certificado de Conclusão / Histórico</h6>
+                                            <input type="file" name="certificado_documento" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf" onchange="previewDocumento(this, 'certificado_preview')">
+                                            <div id="certificado_preview" class="mt-2"></div>
+                                            <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="capturarDocumento('certificado_documento', 'certificado_preview')">
+                                                <i class="fas fa-camera"></i> Capturar
+                                            </button>
+                                            <small class="text-muted d-block">PDF, JPG, PNG (Max: 2MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-stethoscope fa-3x text-info mb-2"></i>
+                                            <h6>Atestado Médico</h6>
+                                            <input type="file" name="atestado_documento" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf" onchange="previewDocumento(this, 'atestado_preview')">
+                                            <div id="atestado_preview" class="mt-2"></div>
+                                            <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="capturarDocumento('atestado_documento', 'atestado_preview')">
+                                                <i class="fas fa-camera"></i> Capturar
+                                            </button>
+                                            <small class="text-muted d-block">PDF, JPG, PNG (Max: 2MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-file-alt fa-3x text-warning mb-2"></i>
+                                            <h6>Declaração de Matrícula</h6>
+                                            <input type="file" name="declaracao_documento" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf" onchange="previewDocumento(this, 'declaracao_preview')">
+                                            <div id="declaracao_preview" class="mt-2"></div>
+                                            <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="capturarDocumento('declaracao_documento', 'declaracao_preview')">
+                                                <i class="fas fa-camera"></i> Capturar
+                                            </button>
+                                            <small class="text-muted d-block">PDF, JPG, PNG (Max: 2MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h6 class="mt-3">Outros Documentos</h6>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="file" name="outro_documento_1" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="previewDocumento(this, 'outro1_preview')">
+                                    <div id="outro1_preview" class="mt-1"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="file" name="outro_documento_2" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="previewDocumento(this, 'outro2_preview')">
+                                    <div id="outro2_preview" class="mt-1"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="file" name="outro_documento_3" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="previewDocumento(this, 'outro3_preview')">
+                                    <div id="outro3_preview" class="mt-1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+let scannerStream = null;
+let fotoCapturada = null;
+let currentInputId = null;
+let currentPreviewId = null;
+let currentDocumentoNome = null;
+let cropper = null;
+let currentZoom = 1;
+let rotacaoAtual = 0;
+
+// Abrir scanner
+function capturarDocumento(inputId, previewId, documentoNome) {
+    currentInputId = inputId;
+    currentPreviewId = previewId;
+    currentDocumentoNome = documentoNome || 'documento';
+    
+    // Fechar qualquer modal aberto primeiro
+    fecharTodosModais();
+    
+    const modal = new bootstrap.Modal(document.getElementById('modalScanner'));
+    modal.show();
+    
+    iniciarCamera();
+}
+
+// Fechar todos os modais
+function fecharTodosModais() {
+    const modais = ['modalScanner', 'modalAjuste'];
+    modais.forEach(modalId => {
+        const modalElement = document.getElementById(modalId);
+        if (modalElement) {
+            const modal = bootstrap.Modal.getInstance(modalElement);
+            if (modal) {
+                modal.hide();
+            }
+        }
+    });
+}
+
+// Iniciar câmera
+async function iniciarCamera() {
+    const video = document.getElementById('scannerVideo');
+    
+    try {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            throw new Error('Seu navegador não suporta acesso à câmera');
+        }
+        
+        if (scannerStream) {
+            scannerStream.getTracks().forEach(track => track.stop());
+        }
+        
+        const constraints = {
+            video: {
+                width: { ideal: 1920 },
+                height: { ideal: 1080 },
+                facingMode: { exact: "environment" }
+            }
+        };
+        
+        try {
+            scannerStream = await navigator.mediaDevices.getUserMedia(constraints);
+        } catch (err) {
+            scannerStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        }
+        
+        video.srcObject = scannerStream;
+        await video.play();
+        
+        ajustarFrameDocumento();
+        
+    } catch (err) {
+        console.error('Erro ao acessar câmera:', err);
+        alert('Erro ao acessar a câmera: ' + err.message);
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalScanner'));
+        if (modal) modal.hide();
+    }
+}
+
+// Ajustar frame do documento
+function ajustarFrameDocumento() {
+    const formato = document.getElementById('documentoFormato').value;
+    const frame = document.querySelector('.document-frame');
+    if (!frame) return;
+    
+    let proporcoes = {
+        'A4': { width: 70, height: 99 },
+        'A5': { width: 70, height: 99 },
+        'Carta': { width: 70, height: 90 },
+        'BI': { width: 60, height: 85 },
+        'Certificado': { width: 75, height: 95 }
+    };
+    
+    const prop = proporcoes[formato] || proporcoes['A4'];
+    frame.style.width = prop.width + '%';
+    frame.style.height = prop.height + '%';
+    frame.style.left = ((100 - prop.width) / 2) + '%';
+    frame.style.top = ((100 - prop.height) / 2) + '%';
+}
+
+// Tirar foto
+function tirarFotoScanner() {
+    const video = document.getElementById('scannerVideo');
+    const canvas = document.getElementById('scannerCanvas');
+    const context = canvas.getContext('2d');
+    
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    aplicarCorrecoes(canvas);
+    
+    fotoCapturada = canvas.toDataURL('image/jpeg', 0.9);
+    
+    const previewDiv = document.getElementById('previewCaptura');
+    previewDiv.innerHTML = `<img src="${fotoCapturada}" style="max-width: 100%; max-height: 150px; border-radius: 8px;">`;
+    
+    const btnTirarFoto = document.querySelector('#modalScanner .btn-primary');
+    if (btnTirarFoto) {
+        btnTirarFoto.innerHTML = '<i class="fas fa-check"></i> Foto tirada!';
+        setTimeout(() => {
+            btnTirarFoto.innerHTML = '<i class="fas fa-camera"></i> Tirar Foto';
+        }, 2000);
+    }
+}
+
+// Aplicar correções
+function aplicarCorrecoes(canvas) {
+    const ctx = canvas.getContext('2d');
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    
+    let brightness = 20;
+    let contrast = 30;
+    
+    for (let i = 0; i < data.length; i += 4) {
+        data[i] = Math.min(255, Math.max(0, data[i] + brightness));
+        data[i+1] = Math.min(255, Math.max(0, data[i+1] + brightness));
+        data[i+2] = Math.min(255, Math.max(0, data[i+2] + brightness));
+        
+        let factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        data[i] = factor * (data[i] - 128) + 128;
+        data[i+1] = factor * (data[i+1] - 128) + 128;
+        data[i+2] = factor * (data[i+2] - 128) + 128;
+    }
+    
+    ctx.putImageData(imageData, 0, 0);
+}
+
+// Confirmar captura e salvar no campo
+function confirmarCaptura() {
+    if (!fotoCapturada) {
+        alert('Tire uma foto primeiro!');
+        return;
+    }
+    
+    // Converter base64 para blob
+    fetch(fotoCapturada)
+        .then(res => res.blob())
+        .then(blob => {
+            // Criar arquivo
+            const fileName = currentDocumentoNome + '_' + Date.now() + '.jpg';
+            const file = new File([blob], fileName, { type: 'image/jpeg' });
+            
+            // Criar DataTransfer para adicionar ao input file
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+            
+            // Encontrar o input file
+            const inputFile = document.getElementById(currentInputId);
+            if (inputFile) {
+                inputFile.files = dataTransfer.files;
+                
+                // Disparar evento change para ativar o preview
+                const event = new Event('change', { bubbles: true });
+                inputFile.dispatchEvent(event);
+                
+                // Chamar função de preview se existir
+                if (typeof previewDocumento === 'function') {
+                    previewDocumento(inputFile, currentPreviewId);
+                }
+                
+                // Mostrar mensagem de sucesso
+                mostrarMensagem('Documento capturado e anexado com sucesso!', 'success');
+            }
+            
+            // Fechar modal do scanner
+            const modalScanner = bootstrap.Modal.getInstance(document.getElementById('modalScanner'));
+            if (modalScanner) {
+                modalScanner.hide();
+            }
+            
+            // Fechar modal de ajuste se estiver aberto
+            const modalAjuste = bootstrap.Modal.getInstance(document.getElementById('modalAjuste'));
+            if (modalAjuste) {
+                modalAjuste.hide();
+            }
+            
+            // Parar câmera
+            if (scannerStream) {
+                scannerStream.getTracks().forEach(track => track.stop());
+                scannerStream = null;
+            }
+            
+            // Limpar variáveis
+            fotoCapturada = null;
+            document.getElementById('previewCaptura').innerHTML = '<i class="fas fa-camera fa-3x text-muted"></i>';
+            currentZoom = 1;
+            const video = document.getElementById('scannerVideo');
+            if (video) video.style.transform = 'scale(1)';
+        })
+        .catch(error => {
+            console.error('Erro ao processar imagem:', error);
+            mostrarMensagem('Erro ao processar a imagem. Tente novamente.', 'error');
+        });
+}
+
+// Mostrar mensagem
+function mostrarMensagem(mensagem, tipo) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${tipo === 'success' ? 'success' : 'danger'} alert-dismissible fade show position-fixed`;
+    alertDiv.style.top = '20px';
+    alertDiv.style.right = '20px';
+    alertDiv.style.zIndex = '9999';
+    alertDiv.style.minWidth = '300px';
+    alertDiv.innerHTML = `
+        ${mensagem}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}
+
+// Zoom
+function zoomIn() {
+    const video = document.getElementById('scannerVideo');
+    currentZoom += 0.1;
+    video.style.transform = `scale(${currentZoom})`;
+}
+
+function zoomOut() {
+    const video = document.getElementById('scannerVideo');
+    currentZoom = Math.max(0.5, currentZoom - 0.1);
+    video.style.transform = `scale(${currentZoom})`;
+}
+
+// Ajustar documento
+function ajustarDocumento() {
+    if (!fotoCapturada) {
+        alert('Tire uma foto primeiro!');
+        return;
+    }
+    
+    document.getElementById('imagemAjuste').src = fotoCapturada;
+    const modal = new bootstrap.Modal(document.getElementById('modalAjuste'));
+    modal.show();
+}
+
+// Iniciar cropper
+function iniciarCropper() {
+    const img = document.getElementById('imagemAjuste');
+    if (cropper) {
+        cropper.destroy();
+    }
+    
+    cropper = new Cropper(img, {
+        aspectRatio: NaN,
+        viewMode: 1,
+        dragMode: 'crop',
+        cropBoxMovable: true,
+        cropBoxResizable: true,
+        guides: true,
+        center: true,
+        highlight: true,
+        background: true
+    });
+}
+
+// Aplicar corte
+function aplicarCorte() {
+    if (cropper) {
+        const canvas = cropper.getCroppedCanvas();
+        fotoCapturada = canvas.toDataURL('image/jpeg', 0.9);
+        
+        const previewDiv = document.getElementById('previewCaptura');
+        previewDiv.innerHTML = `<img src="${fotoCapturada}" style="max-width: 100%; max-height: 150px; border-radius: 8px;">`;
+        
+        const modalAjuste = bootstrap.Modal.getInstance(document.getElementById('modalAjuste'));
+        if (modalAjuste) {
+            modalAjuste.hide();
+        }
+        
+        if (cropper) {
+            cropper.destroy();
+            cropper = null;
+        }
+        
+        mostrarMensagem('Documento ajustado com sucesso!', 'success');
+    }
+}
+
+// Girar imagem
+function girarImagem() {
+    rotacaoAtual = (rotacaoAtual + 90) % 360;
+    const img = document.getElementById('imagemAjuste');
+    img.style.transform = `rotate(${rotacaoAtual}deg)`;
+    
+    if (cropper) {
+        cropper.setData({ rotate: rotacaoAtual });
+    }
+}
+
+// Aplicar filtro
+function aplicarFiltro() {
+    const img = document.getElementById('imagemAjuste');
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    
+    for (let i = 0; i < data.length; i += 4) {
+        const gray = (data[i] + data[i+1] + data[i+2]) / 3;
+        const contrast = 1.5;
+        const brightness = 20;
+        
+        let newColor = (gray - 128) * contrast + 128 + brightness;
+        newColor = Math.min(255, Math.max(0, newColor));
+        
+        data[i] = newColor;
+        data[i+1] = newColor;
+        data[i+2] = newColor;
+    }
+    
+    ctx.putImageData(imageData, 0, 0);
+    fotoCapturada = canvas.toDataURL('image/jpeg', 0.9);
+    document.getElementById('imagemAjuste').src = fotoCapturada;
+    
+    setTimeout(() => iniciarCropper(), 100);
+    mostrarMensagem('Filtro de melhoria aplicado!', 'success');
+}
+
+function resetarAjuste() {
+    rotacaoAtual = 0;
+    document.getElementById('imagemAjuste').style.transform = 'rotate(0deg)';
+    
+    if (cropper) {
+        cropper.reset();
+        cropper.setData({ rotate: 0 });
+    }
+}
+
+// Eventos dos modais
+document.getElementById('modalScanner')?.addEventListener('shown.bs.modal', function() {
+    ajustarFrameDocumento();
+    currentZoom = 1;
+    const video = document.getElementById('scannerVideo');
+    if (video) video.style.transform = 'scale(1)';
+});
+
+document.getElementById('modalScanner')?.addEventListener('hidden.bs.modal', function() {
+    if (scannerStream) {
+        scannerStream.getTracks().forEach(track => track.stop());
+        scannerStream = null;
+    }
+    fotoCapturada = null;
+    currentZoom = 1;
+    const video = document.getElementById('scannerVideo');
+    if (video) video.style.transform = 'scale(1)';
+    document.getElementById('previewCaptura').innerHTML = '<i class="fas fa-camera fa-3x text-muted"></i>';
+});
+
+document.getElementById('modalAjuste')?.addEventListener('shown.bs.modal', function() {
+    setTimeout(() => iniciarCropper(), 100);
+});
+
+document.getElementById('modalAjuste')?.addEventListener('hidden.bs.modal', function() {
+    if (cropper) {
+        cropper.destroy();
+        cropper = null;
+    }
+    rotacaoAtual = 0;
+});
+</script>
+
+<style>
+.img-thumbnail {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.position-relative {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-sm {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.document-frame {
+    position: absolute;
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    transition: all 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { border-color: #00ff00; }
+    50% { border-color: #ffff00; }
+    100% { border-color: #00ff00; }
+}
+
+#scannerVideo {
+    transform-origin: center center;
+    transition: transform 0.3s;
+}
+</style>

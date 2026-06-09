@@ -1,0 +1,32 @@
+Principais melhorias implementadas:
+1. Progress Bar com Porcentagem
+
+    Barra de progresso visual com gradiente
+
+    Contador de questões respondidas (X de Y)
+
+    Percentual de conclusão em tempo real
+
+    Atualização automática ao responder questões
+
+2. Webcam de Monitoramento em Tempo Real
+
+    Câmera fixa no canto direito da tela
+
+    Layout responsivo (se adapta a diferentes tamanhos)
+
+    Status da câmera (ativa/inativa)
+
+    Overlay indicando monitoramento
+
+3. Sistema de Segurança
+
+    Detecção de perda de foco da página (alt+tab, trocar de aba)
+
+    Detecção ao minimizar a janela
+
+    Bloqueio de teclas de atalho (F12, F5, Ctrl+R, etc.)
+
+    Verificação periódica da câmera (se desativar, finaliza prova)
+
+    Detecção ao tentar sair da página (beforeunload)

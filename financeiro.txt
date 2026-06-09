@@ -1,0 +1,95 @@
+escola/financeiro/
+├── index.php                       (Dashboard Financeiro)
+├── mensalidades.php                (Gestão de Mensalidades) - JÁ CRIADO
+├── extratos.php                    (Extratos Financeiros) - JÁ CRIADO
+├── recibos.php                     (Recibos) - JÁ CRIADO
+│
+├── contas_receber/                 (Contas a Receber)
+│   ├── index.php                   (Lista de contas a receber)
+│   ├── adicionar.php               (Adicionar conta a receber)
+│   ├── editar.php                  (Editar conta a receber)
+│   └── receber.php                 (Registrar recebimento)
+│
+├── contas_pagar/                   (Contas a Pagar)
+│   ├── index.php                   (Lista de contas a pagar)
+│   ├── adicionar.php               (Adicionar conta a pagar)
+│   ├── editar.php                  (Editar conta a pagar)
+│   └── pagar.php                   (Registrar pagamento)
+│
+├── fluxo_caixa/                    (Fluxo de Caixa)
+│   ├── index.php                   (Dashboard de fluxo de caixa)
+│   ├── lancamentos.php             (Lançamentos diários)
+│   ├── consolidado.php             (Consolidado por período)
+│   └── graficos.php                (Gráficos de fluxo de caixa)
+│
+├── balancete/                      (Balancete Financeiro)
+│   ├── index.php                   (Balancete geral)
+│   ├── contas.php                  (Balancete por conta)
+│   └── comparativo.php             (Comparativo de períodos)
+│
+├── orcamento/                      (Orçamento Escolar)
+│   ├── index.php                   (Planejamento orçamentário)
+│   ├── categorias.php              (Categorias orçamentárias)
+│   ├── executado.php               (Execução orçamentária)
+│   └── desvios.php                 (Análise de desvios)
+│
+├── taxas/                          (Taxas e Multas)
+│   ├── index.php                   (Lista de taxas)
+│   ├── configurar.php              (Configuração de taxas)
+│   ├── aplicar.php                 (Aplicar taxas automaticamente)
+│   └── isencoes.php                (Isenções e descontos especiais)
+│
+├── parcelamentos/                  (Parcelamentos)
+│   ├── index.php                   (Acordos de parcelamento)
+│   ├── novo.php                    (Novo parcelamento)
+│   ├── simular.php                 (Simulação de parcelas)
+│   └── acompanhar.php              (Acompanhamento de parcelas)
+│fim
+├── inadimplencia/                  (Inadimplência)
+│   ├── index.php                   (Lista de inadimplentes)
+│   ├── relatorio.php               (Relatório de inadimplência)
+│   ├── cobranca.php                (Gestão de cobranças)
+│   └── negativacao.php             (Negativação de débitos)
+│
+├── boletos/                        (Boletos Bancários)
+│   ├── index.php                   (Lista de boletos)
+│   ├── gerar.php                   (Gerar boletos em lote)
+│   ├── imprimir.php                (Imprimir boletos)
+│   └── remessa.php                 (Arquivo de remessa)
+│
+├── conciliacao/                    (Conciliação Bancária)
+│   ├── index.php                   (Conciliação)
+│   ├── importar.php                (Importar extrato bancário)
+│   ├── conciliar.php               (Conciliar transações)
+│   └── divergencias.php            (Divergências encontradas)
+│
+├── relatorios_financeiros/         (Relatórios Financeiros)
+│   ├── index.php                   (Central de relatórios)
+│   ├── dre.php                     (Demonstrativo de Resultados)
+│   ├── balanco.php                 (Balanço Patrimonial)
+│   ├── fluxo_mensal.php            (Fluxo de caixa mensal)
+│   └── comparativo_anual.php       (Comparativo anual)
+│
+├── configuracoes/                  (Configurações Financeiras)
+│   ├── index.php                   (Configurações gerais)
+│   ├── plano_contas.php            (Plano de contas contábil)
+│   ├── centros_custo.php           (Centros de custo)
+│   └── parametros.php              (Parâmetros financeiros)
+│
+└── relatorios_personalizados/      (Relatórios Personalizados)
+    ├── index.php                   (Construtor de relatórios)
+    ├── exportar.php                (Exportação de dados)
+    ├── dashboards.php              (Dashboards personalizados)
+    └── agendados.php               (Relatórios agendados)
+    escola/financeiro/
+├── folha_pagamento/                    (NOVO MÓDULO - FOLHA DE PAGAMENTO)
+│   ├── index.php                       (Dashboard da Folha)
+│   ├── funcionarios.php                (Gestão de Funcionários)
+│   ├── cargos.php                      (Cargos e Salários Base)
+│   ├── processar.php                   (Processamento da Folha)
+│   ├── holerites.php                   (Visualização de Holerites)
+│   ├── configuracoes.php               (Configurações da Folha)
+│   ├── relatorios.php                  (Relatórios de Pagamento)
+│   └── backups/                        (Backup das folhas processadas)
+
+https://www.youtube.com/watch?v=jNRxV5DPeTc&list=PL866_LrQxNVipiEgWtJMK5Fcgc6IBfVvc&index=2

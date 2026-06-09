@@ -1,0 +1,352 @@
+BIBLIOTECA
+│
+├── 📌 GESTÃO DO ACERVO
+│   ├── Livros
+│   │   ├── Cadastro de Livros
+│   │   ├── Edição de Livros
+│   │   ├── Exclusão de Livros (logical delete)
+│   │   ├── Busca Avançada
+│   │   ├── Filtros por Categoria/Gênero
+│   │   └── Importação em Lote (CSV/Excel)
+│   │
+│   ├── Categorias
+│   │   ├── Cadastro de Categorias
+│   │   │   ├── Ficção
+│   │   │   ├── Não-Ficção
+│   │   │   ├── Didáticos
+│   │   │   ├── Paradidáticos
+│   │   │   ├── Periódicos
+│   │   │   ├── Revistas
+│   │   │   └── Jornais
+│   │   ├── Subcategorias
+│   │   └── Edição/Exclusão
+│   │
+│   ├── Gêneros Literários
+│   │   ├── Romance
+│   │   ├── Drama
+│   │   ├── Comédia
+│   │   ├── Terror
+│   │   ├── Suspense
+│   │   ├── Aventura
+│   │   ├── Fantasia
+│   │   ├── Ficção Científica
+│   │   ├── Biografia
+│   │   └── Poesia
+│   │
+│   ├── Editoras
+│   │   ├── Cadastro de Editoras
+│   │   ├── Contatos
+│   │   └── Catálogos
+│   │
+│   ├── Autores
+│   │   ├── Cadastro de Autores
+│   │   ├── Biografia
+│   │   ├── Nacionalidade
+│   │   └── Obras do Autor
+│   │
+│   └── Localização Física
+│       ├── Prateleiras
+│       ├── Estantes
+│       ├── Corredores
+│       ├── Seções
+│       └── Código de Localização (CDD/CDU)
+│
+├── 🔍 CONSULTA E PESQUISA
+│   ├── Busca Simples
+│   │   ├── Por Título
+│   │   ├── Por Autor
+│   │   ├── Por ISBN
+│   │   ├── Por Editora
+│   │   └── Por Palavra-Chave
+│   │
+│   ├── Busca Avançada
+│   │   ├── Combinação de Filtros
+│   │   ├── Faixa de Ano
+│   │   ├── Categoria/Gênero
+│   │   ├── Idioma
+│   │   └── Disponibilidade
+│   │
+│   ├── Resultados da Busca
+│   │   ├── Listagem com Capa
+│   │   ├── Detalhes do Livro
+│   │   ├── Disponibilidade
+│   │   ├── Exemplares Disponíveis
+│   │   └── Reservar Livro
+│   │
+│   └── Histórico de Pesquisas
+│
+├── 📖 EMPRÉSTIMOS
+│   ├── Registrar Empréstimo
+│   │   ├── Buscar Aluno/Funcionário
+│   │   ├── Selecionar Exemplar
+│   │   ├── Data de Empréstimo
+│   │   ├── Data de Devolução Prevista
+│   │   ├── Quantidade de Exemplares
+│   │   ├── Verificar Limite de Empréstimos
+│   │   ├── Verificar Pendências
+│   │   └── Gerar Comprovante
+│   │
+│   ├── Controle de Empréstimos
+│   │   ├── Empréstimos Ativos
+│   │   ├── Empréstimos Atrasados
+│   │   ├── Empréstimos Devolvidos
+│   │   ├── Renovação de Empréstimo
+│   │   ├── Prorrogação de Prazo
+│   │   └── Reserva de Exemplares
+│   │
+│   ├── Devoluções
+│   │   ├── Registrar Devolução
+│   │   ├── Verificar Atraso
+│   │   ├── Calcular Multa (se aplicável)
+│   │   ├── Registrar Multa
+│   │   ├── Pagamento de Multa
+│   │   └── Gerar Recibo de Devolução
+│   │
+│   ├── Regras de Empréstimo
+│   │   ├── Período de Empréstimo (dias)
+│   │   ├── Limite de Exemplares por Usuário
+│   │   ├── Prazos por Tipo de Usuário
+│   │   │   ├── Alunos: 7 dias, 2 livros
+│   │   │   ├── Professores: 15 dias, 5 livros
+│   │   │   ├── Funcionários: 10 dias, 3 livros
+│   │   │   └── Direção: 20 dias, 10 livros
+│   │   ├── Multa por Atraso (valor/dia)
+│   │   ├── Renovação Permitida (sim/não)
+│   │   └── Quantidade de Renovações
+│   │
+│   └── Bloqueios
+│       ├── Alunos com Pendências
+│       ├── Alunos com Multas
+│       ├── Alunos com Livros Atrasados
+│       ├── Bloqueio Automático
+│       ├── Bloqueio Manual
+│       └── Desbloqueio
+│
+├── 🏷️ RESERVAS
+│   ├── Reservar Exemplar
+│   │   ├── Buscar Exemplar
+│   │   ├── Verificar Disponibilidade
+│   │   ├── Fila de Espera
+│   │   ├── Notificação ao Usuário
+│   │   └── Cancelamento de Reserva
+│   │
+│   ├── Lista de Reservas
+│   │   ├── Reservas Ativas
+│   │   ├── Reservas Aguardando
+│   │   ├── Reservas Expiradas
+│   │   └── Reservas Canceladas
+│   │
+│   └── Controle de Fila
+│       ├── Posição na Fila
+│       ├── Tempo Médio de Espera
+│       └── Notificações Automáticas
+│
+├── 👥 GESTÃO DE USUÁRIOS
+│   ├── Tipos de Usuários
+│   │   ├── Alunos
+│   │   ├── Professores
+│   │   ├── Funcionários
+│   │   ├── Direção
+│   │   ├── Comunidade Externa (opcional)
+│   │   └── Visitantes
+│   │
+│   ├── Cadastro de Usuários
+│   │   ├── Dados Pessoais
+│   │   ├── Categoria
+│   │   ├── Data de Cadastro
+│   │   ├── Validade da Carteirinha
+│   │   ├── Foto
+│   │   └── Status (ativo/bloqueado)
+│   │
+│   ├── Carteirinha de Biblioteca
+│   │   ├── Gerar Carteirinha
+│   │   ├── Código de Barras/QR Code
+│   │   ├── Impressão
+│   │   └── Renovação
+│   │
+│   └── Histórico do Usuário
+│       ├── Empréstimos Realizados
+│       ├── Devoluções
+│       ├── Multas Pagas
+│       ├── Reservas Feitas
+│       └── Pendências
+│
+├── 📊 RELATÓRIOS
+│   ├── Relatórios de Acervo
+│   │   ├── Lista Completa de Livros
+│   │   ├── Livros por Categoria
+│   │   ├── Livros por Editora
+│   │   ├── Livros por Autor
+│   │   ├── Livros por Ano de Publicação
+│   │   ├── Livros Mais Antigos
+│   │   ├── Livros Mais Recentes
+│   │   └── Livros em Falta (extraviados)
+│   │
+│   ├── Relatórios de Empréstimos
+│   │   ├── Empréstimos por Período
+│   │   ├── Empréstimos por Usuário
+│   │   ├── Empréstimos por Turma
+│   │   ├── Livros Mais Emprestados
+│   │   ├── Empréstimos em Atraso
+│   │   ├── Devoluções no Período
+│   │   └── Renovações Realizadas
+│   │
+│   ├── Relatórios de Multas
+│   │   ├── Multas por Período
+│   │   ├── Multas por Usuário
+│   │   ├── Multas Pagas/Não Pagas
+│   │   └── Valor Total Arrecadado
+│   │
+│   ├── Relatórios de Usuários
+│   │   ├── Usuários Ativos
+│   │   ├── Usuários Inativos/Bloqueados
+│   │   ├── Usuários por Categoria
+│   │   ├── Usuários com Pendências
+│   │   └── Novos Usuários por Período
+│   │
+│   └── Estatísticas da Biblioteca
+│       ├── Total de Livros no Acervo
+│       ├── Total de Empréstimos (mês/ano)
+│       ├── Média de Empréstimos por Dia
+│       ├── Taxa de Atraso
+│       ├── Índice de Renovação
+│       ├── Livros Mais Procurados
+│       ├── Horários de Maior Movimento
+│       └── Comparativo Mensal/Anual
+│
+├── 🔔 NOTIFICAÇÕES
+│   ├── Lembretes de Devolução
+│   │   ├── 3 dias antes do vencimento
+│   │   ├── 1 dia antes do vencimento
+│   │   ├── No dia do vencimento
+│   │   └── Após vencimento (atrasado)
+│   │
+│   ├── Notificações de Reserva
+│   │   ├── Exemplar disponível
+│   │   ├── Prazo para retirada
+│   │   └── Cancelamento de reserva
+│   │
+│   ├── Avisos de Multa
+│   │   ├── Multa gerada
+│   │   ├── Valor atualizado
+│   │   └── Pagamento pendente
+│   │
+│   └── Comunicações Gerais
+│       ├── Novos livros no acervo
+│       ├── Eventos da biblioteca
+│       ├── Mudanças nas regras
+│       └── Manutenções programadas
+│
+├── 📁 DOCUMENTAÇÃO
+│   ├── Regulamento da Biblioteca
+│   ├── Política de Empréstimos
+│   ├── Tabela de Multas
+│   ├── Formulários
+│   └── Manuais de Utilização
+│
+└── ⚙️ CONFIGURAÇÕES
+    ├── Parâmetros Gerais
+    │   ├── Dias de Empréstimo Padrão
+    │   ├── Limite de Exemplares
+    │   ├── Valor da Multa por Dia
+    │   ├── Dias para Retirada de Reserva
+    │   └── Horário de Funcionamento
+    │
+    ├── Classificação
+    │   ├── CDD (Classificação Decimal de Dewey)
+    │   ├── CDU (Classificação Decimal Universal)
+    │   └── Personalizada
+    │
+    ├── Configurações de Notificação
+    │   ├── Email
+    │   ├── SMS
+    │   ├── WhatsApp
+    │   └── Push Notification
+    │
+    └── Impressão
+        ├── Modelo de Carteirinha
+        ├── Modelo de Comprovante
+        ├── Modelo de Recibo de Multa
+        └── Configurações de Impressora
+
+
+
+
+        escola/
+│
+├── biblioteca/
+│   ├── index.php (Dashboard da Biblioteca)
+│   │
+│   ├── acervo/
+│   │   ├── listar_livros.php
+│   │   ├── cadastrar_livro.php
+│   │   ├── editar_livro.php
+│   │   ├── visualizar_livro.php
+│   │   ├── excluir_livro.php
+│   │   ├── importar_livros.php
+│   │   └── buscar_livros.php (AJAX)
+│   │
+│   ├── categorias/
+│   │   ├── listar_categorias.php
+│   │   ├── cadastrar_categoria.php
+│   │   └── editar_categoria.php
+│   │
+│   ├── autores/
+│   │   ├── listar_autores.php
+│   │   ├── cadastrar_autor.php
+│   │   └── editar_autor.php
+│   │
+│   ├── editoras/
+│   │   ├── listar_editoras.php
+│   │   ├── cadastrar_editora.php
+│   │   └── editar_editora.php
+│   │
+│   ├── emprestimos/
+│   │   ├── novo_emprestimo.php
+│   │   ├── listar_emprestimos.php
+│   │   ├── devolver_livro.php
+│   │   ├── renovar_emprestimo.php
+│   │   ├── emprestimos_ativos.php
+│   │   ├── emprestimos_atrasados.php
+│   │   └── historico_emprestimos.php
+│   │
+│   ├── reservas/
+│   │   ├── nova_reserva.php
+│   │   ├── listar_reservas.php
+│   │   ├── cancelar_reserva.php
+│   │   └── confirmar_retirada.php
+│   │
+│   ├── usuarios/
+│   │   ├── listar_usuarios.php
+│   │   ├── cadastrar_usuario_biblioteca.php
+│   │   ├── editar_usuario_biblioteca.php
+│   │   ├── carteirinha.php
+│   │   ├── historico_usuario.php
+│   │   ├── pendencias_usuario.php
+│   │   └── bloquear_usuario.php
+│   │
+│   ├── multas/
+│   │   ├── listar_multas.php
+│   │   ├── pagar_multa.php
+│   │   ├── relatorio_multas.php
+│   │   └── configurar_multas.php
+│   │
+│   ├── relatorios/
+│   │   ├── relatorio_acervo.php
+│   │   ├── relatorio_emprestimos.php
+│   │   ├── relatorio_usuarios.php
+│   │   ├── relatorio_multas.php
+│   │   ├── estatisticas_biblioteca.php
+│   │   ├── livros_mais_emprestados.php
+│   │   └── exportar_relatorios.php
+│   │
+│   ├── notificacoes/
+│   │   ├── enviar_notificacoes.php
+│   │   ├── configurar_notificacoes.php
+│   │   └── historico_notificacoes.php
+│   │
+│   └── config/
+│       ├── parametros_gerais.php
+│       ├── classificacao.php
+│       ├── config_impressao.php
+│       └── backup_acervo.php

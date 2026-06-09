@@ -1,0 +1,67 @@
+escola/
+│
+├── pedagogico/
+│   ├── index.php (Dashboard Pedagógico)
+│   │
+│   ├── alunos/
+│   │   ├── listar_alunos.php
+│   │   ├── cadastrar_aluno.php
+│   │   ├── editar_aluno.php
+│   │   ├── visualizar_aluno.php
+│   │   ├── historico_escolar.php
+│   │   └── transferir_aluno.php
+│   │
+│   ├── turmas/
+│   │   ├── listar_turmas.php
+│   │   ├── criar_turma.php
+│   │   ├── editar_turma.php
+│   │   ├── horario_turma.php
+│   │   ├── alunos_turma.php
+│   │   └── atribuir_professor.php
+│   │
+│   ├── disciplinas/
+│   │   ├── listar_disciplinas.php
+│   │   ├── cadastrar_disciplina.php
+│   │   └── atribuir_professor_disciplina.php
+│   │
+│   ├── notas/
+│   │   ├── lancar_notas.php
+│   │   ├── calcular_medias.php
+│   │   ├── recuperacao.php
+│   │   └── exame_final.php
+│   │
+│   ├── provas/
+│   │   ├── listar_provas.php
+│   │   ├── criar_prova.php
+│   │   ├── questoes.php
+│   │   ├── provas_disponiveis.php
+│   │   ├── provas_andamento.php
+│   │   ├── resultados_prova.php
+│   │   └── corrigir_prova.php
+│   │
+│   ├── frequencia/
+│   │   ├── marcar_presenca.php
+│   │   ├── relatorio_faltas.php
+│   │   └── justificativas.php
+│   │
+│   ├── boletins/
+│   │   ├── gerar_boletim.php
+│   │   ├── boletim_turma.php
+│   │   └── boletim_individual.php
+│   │
+│   ├── relatorios/
+│   │   ├── desempenho_turma.php
+│   │   ├── desempenho_disciplina.php
+│   │   ├── aprovacao_reprovacao.php
+│   │   ├── ranking_alunos.php
+│   │   └── exportar_relatorios.php
+│   │
+│   ├── planejamento/
+│   │   ├── plano_ensino.php
+│   │   ├── plano_aula.php
+│   │   └── projetos.php
+│   │
+│   └── config/
+│       ├── anos_letivos.php
+│       ├── parametros_avaliacao.php
+│       └── ciclos_ensino.php

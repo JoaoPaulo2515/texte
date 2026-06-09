@@ -1,0 +1,40 @@
+sige_Plataforma/
+├── escola/
+│   ├── professorlancamento/                    # NOVO MÓDULO DO PROFESSOR
+│   │   ├── index.php                 # Dashboard do Professor
+│   │   ├── lancamento_notas/
+│   │   │   ├── index.php
+│   │   │   ├── lancar.php
+│   │   │   └── visualizar.php
+│   │   ├── chamada/
+│   │   │   ├── index.php
+│   │   │   ├── fazer_chamada.php
+│   │   │   └── relatorio.php
+│   │   ├── conselho_notas/
+│   │   │   ├── index.php
+│   │   │   ├── reuniao.php
+│   │   │   └── resultados.php
+│   │   ├── minha_biblioteca/
+│   │   │   ├── index.php
+│   │   │   ├── livros.php
+│   │   │   └── emprestimos.php
+│   │   ├── proposta_prova/
+│   │   │   ├── index.php
+│   │   │   ├── criar.php
+│   │   │   └── listar.php
+│   │   ├── relatorios/
+│   │   │   ├── mini_pauta.php
+│   │   │   ├── pauta_geral.php
+│   │   │   ├── estatisticas_turma.php
+│   │   │   └── estatisticas_disciplina.php
+│   │   ├── agenda/
+│   │   │   ├── horarios_aulas.php
+│   │   │   └── calendario_provas.php
+│   │   └── financeiro/
+│   │       ├── perfil.php
+│   │       ├── meu_salario.php
+│   │       ├── dividas_pagar.php
+│   │       ├── a_receber.php
+│   │       ├── solicitar_vale.php
+│   │       └── solicitar_ferias.php
+│   │
